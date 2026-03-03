@@ -3,6 +3,7 @@
 services:
   mysql:
     image: mysql:latest
+    command: --bind-address=0.0.0.0
     container_name: mysql_server
     restart: always
     environment:
@@ -14,7 +15,6 @@ services:
     - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-    command: --bind-address 0.0.0.0
     networks:
       - mysql_network
  

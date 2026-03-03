@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            btnAgregarMateria = new Button();
             txtMateria = new TextBox();
             label1 = new Label();
             dgvMaterias = new DataGridView();
-            btnAgregarMateria = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -60,6 +60,15 @@
             splitContainer1.SplitterDistance = 92;
             splitContainer1.TabIndex = 0;
             // 
+            // btnAgregarMateria
+            // 
+            btnAgregarMateria.Location = new Point(481, 30);
+            btnAgregarMateria.Name = "btnAgregarMateria";
+            btnAgregarMateria.Size = new Size(75, 23);
+            btnAgregarMateria.TabIndex = 2;
+            btnAgregarMateria.Text = "Agregar";
+            btnAgregarMateria.UseVisualStyleBackColor = true;
+            // 
             // txtMateria
             // 
             txtMateria.Location = new Point(12, 48);
@@ -85,15 +94,6 @@
             dgvMaterias.Size = new Size(800, 354);
             dgvMaterias.TabIndex = 0;
             // 
-            // btnAgregarMateria
-            // 
-            btnAgregarMateria.Location = new Point(481, 30);
-            btnAgregarMateria.Name = "btnAgregarMateria";
-            btnAgregarMateria.Size = new Size(75, 23);
-            btnAgregarMateria.TabIndex = 2;
-            btnAgregarMateria.Text = "Agregar";
-            btnAgregarMateria.UseVisualStyleBackColor = true;
-            // 
             // frmMaterias
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -102,6 +102,7 @@
             Controls.Add(splitContainer1);
             Name = "frmMaterias";
             Text = "Materias";
+            Load += frmMaterias_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
