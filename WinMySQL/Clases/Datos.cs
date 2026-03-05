@@ -8,7 +8,7 @@ namespace WinMySQL.Clases
 {
     internal class Datos
     {
-        string cadenaConexion="server=localhost;user=luis;pwd=joseluis;DataBase=escolar";
+        string cadenaConexion="server=localhost;user=luis;pwd=joseluis;DataBase=escolar;port=3307";
         MySqlConnection conexion;
 
         private void Conectar()

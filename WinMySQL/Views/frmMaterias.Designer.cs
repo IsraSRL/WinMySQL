@@ -68,6 +68,7 @@
             btnAgregarMateria.TabIndex = 2;
             btnAgregarMateria.Text = "Agregar";
             btnAgregarMateria.UseVisualStyleBackColor = true;
+            btnAgregarMateria.Click += btnAgregarMateria_Click;
             // 
             // txtMateria
             // 
@@ -93,6 +94,7 @@
             dgvMaterias.Name = "dgvMaterias";
             dgvMaterias.Size = new Size(800, 354);
             dgvMaterias.TabIndex = 0;
+            dgvMaterias.CellContentDoubleClick += dgvMaterias_CellContentDoubleClick;
             // 
             // frmMaterias
             // 
