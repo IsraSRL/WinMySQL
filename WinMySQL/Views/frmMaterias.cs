@@ -49,5 +49,23 @@ namespace WinMySQL.Views
                 dgvMaterias.CurrentRow.Cells[2].Value.ToString());
             materia.ShowDialog();
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int idMateria = Convert.ToInt32(dgvMaterias.CurrentRow.Cells[0].Value);
+            if (MessageBox.Show("Deseas eliminar la materia: " + dgvMaterias.CurrentRow.Cells[1].Value.ToString(),
+                "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                bool f = datos.EjecutarComando($"Delete from MATERIAS where idMATERIAS=" + $"{idMateria}");
+                if (f)
+                {
+                    MessageBox.Show("Registro eliminado", "Sistema");
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el registro");
+                }
+            }
+        }
     }
 }
