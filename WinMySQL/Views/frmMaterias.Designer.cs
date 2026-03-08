@@ -36,6 +36,8 @@
             dgvMaterias = new DataGridView();
             cmsData = new ContextMenuStrip(components);
             eliminarToolStripMenuItem = new ToolStripMenuItem();
+            actualizarDatosToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -103,9 +105,9 @@
             // 
             // cmsData
             // 
-            cmsData.Items.AddRange(new ToolStripItem[] { eliminarToolStripMenuItem });
+            cmsData.Items.AddRange(new ToolStripItem[] { actualizarDatosToolStripMenuItem, toolStripSeparator1, eliminarToolStripMenuItem });
             cmsData.Name = "contextMenuStrip1";
-            cmsData.Size = new Size(181, 48);
+            cmsData.Size = new Size(181, 76);
             // 
             // eliminarToolStripMenuItem
             // 
@@ -113,6 +115,18 @@
             eliminarToolStripMenuItem.Size = new Size(180, 22);
             eliminarToolStripMenuItem.Text = "Eliminar";
             eliminarToolStripMenuItem.Click += eliminarToolStripMenuItem_Click;
+            // 
+            // actualizarDatosToolStripMenuItem
+            // 
+            actualizarDatosToolStripMenuItem.Name = "actualizarDatosToolStripMenuItem";
+            actualizarDatosToolStripMenuItem.Size = new Size(180, 22);
+            actualizarDatosToolStripMenuItem.Text = "Actualizar Datos";
+            actualizarDatosToolStripMenuItem.Click += actualizarDatosToolStripMenuItem_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // frmMaterias
             // 
@@ -142,5 +156,7 @@
         private Button btnAgregarMateria;
         private ContextMenuStrip cmsData;
         private ToolStripMenuItem eliminarToolStripMenuItem;
+        private ToolStripMenuItem actualizarDatosToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }

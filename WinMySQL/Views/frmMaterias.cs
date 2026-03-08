@@ -17,8 +17,7 @@ namespace WinMySQL.Views
         {
             InitializeComponent();
         }
-
-        private void frmMaterias_Load(object sender, EventArgs e)
+        public void CargarDatos()
         {
             try
             {
@@ -32,6 +31,10 @@ namespace WinMySQL.Views
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void frmMaterias_Load(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
 
         private void btnAgregarMateria_Click(object sender, EventArgs e)
@@ -66,6 +69,11 @@ namespace WinMySQL.Views
                     MessageBox.Show("Error al eliminar el registro");
                 }
             }
+        }
+
+        private void actualizarDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CargarDatos();
         }
     }
 }
