@@ -9,10 +9,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="backups\" />
     <Folder Include="Imagenes\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="EPPlus" Version="8.5.0" />
+    <PackageReference Include="FastReport.Net.Demo" Version="2026.1.5" />
+    <PackageReference Include="MySql.Data" Version="9.6.0" />
     <PackageReference Include="MySqlConnector" Version="2.5.0" />
   </ItemGroup>
 

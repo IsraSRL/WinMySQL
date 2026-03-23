@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             splitContainer1 = new SplitContainer();
+            btnImportar = new Button();
             btnAgregar = new Button();
             txtBuscar = new TextBox();
             label1 = new Label();
@@ -38,6 +39,7 @@
             recargarDatosToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             eliminarToolStripMenuItem = new ToolStripMenuItem();
+            ofdExcel = new OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -55,6 +57,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(btnImportar);
             splitContainer1.Panel1.Controls.Add(btnAgregar);
             splitContainer1.Panel1.Controls.Add(txtBuscar);
             splitContainer1.Panel1.Controls.Add(label1);
@@ -65,6 +68,16 @@
             splitContainer1.Size = new Size(794, 369);
             splitContainer1.SplitterDistance = 87;
             splitContainer1.TabIndex = 0;
+            // 
+            // btnImportar
+            // 
+            btnImportar.Location = new Point(598, 42);
+            btnImportar.Name = "btnImportar";
+            btnImportar.Size = new Size(75, 23);
+            btnImportar.TabIndex = 3;
+            btnImportar.Text = "Importar";
+            btnImportar.UseVisualStyleBackColor = true;
+            btnImportar.Click += btnImportar_Click;
             // 
             // btnAgregar
             // 
@@ -82,6 +95,7 @@
             txtBuscar.Name = "txtBuscar";
             txtBuscar.Size = new Size(172, 23);
             txtBuscar.TabIndex = 1;
+            txtBuscar.TextChanged += txtBuscar_TextChanged;
             // 
             // label1
             // 
@@ -158,5 +172,7 @@
         private ToolStripMenuItem eliminarToolStripMenuItem;
         private ToolStripMenuItem recargarDatosToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator1;
+        private Button btnImportar;
+        private OpenFileDialog ofdExcel;
     }
 }

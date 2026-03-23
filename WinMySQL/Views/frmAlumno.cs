@@ -19,7 +19,7 @@ namespace WinMySQL.Views
             InitializeComponent();
         }
 
-        public frmAlumno(int id, string nc, string nombre, string appaterno, string apmaterno, int edad, string tel)
+        public frmAlumno(int id, string nc, string nombre, string appaterno, string apmaterno)
         {
             InitializeComponent();
             this.id = id;
@@ -27,8 +27,6 @@ namespace WinMySQL.Views
             txtNombre.Text = nombre;
             txtAPPaterno.Text = appaterno;
             txtAPMaterno.Text = apmaterno;
-            txtEdad.Text = Convert.ToString(edad);
-            txtTelefono.Text = tel;
             update = true;
         }
 
@@ -53,7 +51,7 @@ namespace WinMySQL.Views
             {
                 bool resultado = datos.EjecutarComando(
                     $"insert into ALUMNOS(NumControl, Nombre, ApPaterno, ApMaterno, Edad, NumTelefono)" +
-                    $"values('{txtNumControl.Text}','{txtNombre.Text}','{txtAPPaterno.Text}','{txtAPMaterno.Text}',{edad},'{txtTelefono.Text}')");
+                    $"values('{txtNumControl.Text}','{txtNombre.Text}','{txtAPPaterno.Text}','{txtAPMaterno.Text}')");
 
                 if(resultado)
                 {
@@ -70,7 +68,6 @@ namespace WinMySQL.Views
                 bool resultado = datos.EjecutarComando(
                     $"update ALUMNOS set NumControl='{txtNumControl.Text}'," +
                     $" Nombre='{txtNombre.Text}',ApPaterno='{txtAPPaterno.Text}',ApMaterno='{txtAPMaterno.Text}'" +
-                    $",Edad={edad},NumTelefono='{txtTelefono.Text}'" +
                     $"where idALUMNOS = {id}");
 
                 if (resultado)

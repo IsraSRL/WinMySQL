@@ -82,5 +82,23 @@ namespace WinMySQL.Views
                 dgvProfesor.CurrentRow.Cells[5].Value.ToString());
             profesor.Show();
         }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            string buscar = $"select * from PROFESORES where Nombre like '{txtBuscar.Text}%'";
+            
+            try
+            {
+                ds = datos.Ejecutar(buscar);
+                if (ds != null)
+                {
+                    dgvProfesor.DataSource = ds.Tables[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

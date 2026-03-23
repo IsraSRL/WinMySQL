@@ -35,9 +35,9 @@
             label1 = new Label();
             dgvMaterias = new DataGridView();
             cmsData = new ContextMenuStrip(components);
-            eliminarToolStripMenuItem = new ToolStripMenuItem();
             actualizarDatosToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
+            eliminarToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -82,6 +82,7 @@
             txtMateria.Name = "txtMateria";
             txtMateria.Size = new Size(337, 23);
             txtMateria.TabIndex = 1;
+            txtMateria.TextChanged += txtMateria_TextChanged;
             // 
             // label1
             // 
@@ -107,26 +108,26 @@
             // 
             cmsData.Items.AddRange(new ToolStripItem[] { actualizarDatosToolStripMenuItem, toolStripSeparator1, eliminarToolStripMenuItem });
             cmsData.Name = "contextMenuStrip1";
-            cmsData.Size = new Size(181, 76);
-            // 
-            // eliminarToolStripMenuItem
-            // 
-            eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            eliminarToolStripMenuItem.Size = new Size(180, 22);
-            eliminarToolStripMenuItem.Text = "Eliminar";
-            eliminarToolStripMenuItem.Click += eliminarToolStripMenuItem_Click;
+            cmsData.Size = new Size(160, 54);
             // 
             // actualizarDatosToolStripMenuItem
             // 
             actualizarDatosToolStripMenuItem.Name = "actualizarDatosToolStripMenuItem";
-            actualizarDatosToolStripMenuItem.Size = new Size(180, 22);
+            actualizarDatosToolStripMenuItem.Size = new Size(159, 22);
             actualizarDatosToolStripMenuItem.Text = "Actualizar Datos";
             actualizarDatosToolStripMenuItem.Click += actualizarDatosToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(177, 6);
+            toolStripSeparator1.Size = new Size(156, 6);
+            // 
+            // eliminarToolStripMenuItem
+            // 
+            eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            eliminarToolStripMenuItem.Size = new Size(159, 22);
+            eliminarToolStripMenuItem.Text = "Eliminar";
+            eliminarToolStripMenuItem.Click += eliminarToolStripMenuItem_Click;
             // 
             // frmMaterias
             // 

@@ -75,5 +75,21 @@ namespace WinMySQL.Views
         {
             CargarDatos();
         }
+
+        private void txtMateria_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                ds = datos.Ejecutar($"Select * from MATERIAS where Nombre like '{txtMateria.Text}%'");
+                if (ds != null)
+                {
+                    dgvMaterias.DataSource = ds.Tables[0];
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
