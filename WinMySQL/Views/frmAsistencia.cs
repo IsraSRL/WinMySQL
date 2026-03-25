@@ -26,6 +26,7 @@ namespace WinMySQL.Views
 
         public void Cargar()
         {
+            //mostrar los registros del dia y mes(select)
             try
             {
                 ds = datos.Ejecutar("select alu.NumControl, alu.Nombre, alu.ApPaterno, alu.ApMaterno, Fecha" +
@@ -61,6 +62,7 @@ namespace WinMySQL.Views
                 bool resultado = datos.EjecutarComando(
                     $"insert into ASISTENCIA(NumControl, Fecha)" +
                     $"values('{txtNCAlumno.Text}','{dtpAsistencia.Value.ToShortDateString()}')");
+                //las funciones de To_DateString incluyen hora y por eso no las puedo usar en el select
 
                 if (resultado)
                 {

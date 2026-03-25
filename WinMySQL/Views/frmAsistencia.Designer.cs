@@ -43,33 +43,37 @@
             // 
             // dtpAsistencia
             // 
+            dtpAsistencia.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             dtpAsistencia.Format = DateTimePickerFormat.Custom;
-            dtpAsistencia.Location = new Point(322, 63);
+            dtpAsistencia.Location = new Point(351, 63);
             dtpAsistencia.Name = "dtpAsistencia";
-            dtpAsistencia.Size = new Size(104, 23);
+            dtpAsistencia.Size = new Size(134, 29);
             dtpAsistencia.TabIndex = 0;
             dtpAsistencia.ValueChanged += dtpAsistencia_ValueChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(145, 29);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(99, 27);
             label1.Name = "label1";
-            label1.Size = new Size(171, 15);
+            label1.Size = new Size(246, 21);
             label1.TabIndex = 1;
             label1.Text = "Numero de control del alumno";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(278, 69);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(291, 63);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(54, 21);
             label2.TabIndex = 2;
             label2.Text = "Fecha";
             // 
             // dgvAsistencia
             // 
+            dgvAsistencia.BackgroundColor = SystemColors.ControlDarkDark;
             dgvAsistencia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvAsistencia.Dock = DockStyle.Fill;
             dgvAsistencia.Location = new Point(0, 0);
@@ -86,6 +90,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.BackColor = Color.Azure;
             splitContainer1.Panel1.Controls.Add(txtNCAlumno);
             splitContainer1.Panel1.Controls.Add(label1);
             splitContainer1.Panel1.Controls.Add(label2);
@@ -100,9 +105,10 @@
             // 
             // txtNCAlumno
             // 
-            txtNCAlumno.Location = new Point(322, 26);
+            txtNCAlumno.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNCAlumno.Location = new Point(351, 24);
             txtNCAlumno.Name = "txtNCAlumno";
-            txtNCAlumno.Size = new Size(261, 23);
+            txtNCAlumno.Size = new Size(261, 29);
             txtNCAlumno.TabIndex = 4;
             txtNCAlumno.KeyPress += txtNCAlumno_KeyPress;
             // 
