@@ -34,7 +34,6 @@
             dgvAsistencia = new DataGridView();
             splitContainer1 = new SplitContainer();
             txtNCAlumno = new TextBox();
-            btnAsistencia = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvAsistencia).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -44,15 +43,17 @@
             // 
             // dtpAsistencia
             // 
-            dtpAsistencia.Location = new Point(189, 63);
+            dtpAsistencia.Format = DateTimePickerFormat.Custom;
+            dtpAsistencia.Location = new Point(322, 63);
             dtpAsistencia.Name = "dtpAsistencia";
-            dtpAsistencia.Size = new Size(261, 23);
+            dtpAsistencia.Size = new Size(104, 23);
             dtpAsistencia.TabIndex = 0;
+            dtpAsistencia.ValueChanged += dtpAsistencia_ValueChanged;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 21);
+            label1.Location = new Point(145, 29);
             label1.Name = "label1";
             label1.Size = new Size(171, 15);
             label1.TabIndex = 1;
@@ -61,7 +62,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(145, 69);
+            label2.Location = new Point(278, 69);
             label2.Name = "label2";
             label2.Size = new Size(38, 15);
             label2.TabIndex = 2;
@@ -73,7 +74,7 @@
             dgvAsistencia.Dock = DockStyle.Fill;
             dgvAsistencia.Location = new Point(0, 0);
             dgvAsistencia.Name = "dgvAsistencia";
-            dgvAsistencia.Size = new Size(800, 337);
+            dgvAsistencia.Size = new Size(751, 339);
             dgvAsistencia.TabIndex = 3;
             // 
             // splitContainer1
@@ -86,7 +87,6 @@
             // splitContainer1.Panel1
             // 
             splitContainer1.Panel1.Controls.Add(txtNCAlumno);
-            splitContainer1.Panel1.Controls.Add(btnAsistencia);
             splitContainer1.Panel1.Controls.Add(label1);
             splitContainer1.Panel1.Controls.Add(label2);
             splitContainer1.Panel1.Controls.Add(dtpAsistencia);
@@ -94,35 +94,27 @@
             // splitContainer1.Panel2
             // 
             splitContainer1.Panel2.Controls.Add(dgvAsistencia);
-            splitContainer1.Size = new Size(800, 450);
-            splitContainer1.SplitterDistance = 109;
+            splitContainer1.Size = new Size(751, 451);
+            splitContainer1.SplitterDistance = 108;
             splitContainer1.TabIndex = 4;
             // 
             // txtNCAlumno
             // 
-            txtNCAlumno.Location = new Point(189, 18);
+            txtNCAlumno.Location = new Point(322, 26);
             txtNCAlumno.Name = "txtNCAlumno";
             txtNCAlumno.Size = new Size(261, 23);
             txtNCAlumno.TabIndex = 4;
-            // 
-            // btnAsistencia
-            // 
-            btnAsistencia.Location = new Point(596, 65);
-            btnAsistencia.Name = "btnAsistencia";
-            btnAsistencia.Size = new Size(135, 23);
-            btnAsistencia.TabIndex = 3;
-            btnAsistencia.Text = "Registrar Asistencia";
-            btnAsistencia.UseVisualStyleBackColor = true;
-            btnAsistencia.Click += btnAsistencia_Click;
+            txtNCAlumno.KeyPress += txtNCAlumno_KeyPress;
             // 
             // frmAsistencia
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(751, 451);
             Controls.Add(splitContainer1);
             Name = "frmAsistencia";
             Text = "Asistencia";
+            Load += frmAsistencia_Load;
             ((System.ComponentModel.ISupportInitialize)dgvAsistencia).EndInit();
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
@@ -140,6 +132,5 @@
         private DataGridView dgvAsistencia;
         private SplitContainer splitContainer1;
         private TextBox txtNCAlumno;
-        private Button btnAsistencia;
     }
 }
